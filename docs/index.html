@@ -180,7 +180,7 @@
                 <!-- GIF -->
                 <div class="col-md-10 mx-auto">
                     <div class="video-container">
-                        <video id="myVideo2" class="video-fluid" autoplay muted loop playsinline>
+                        <video id="ApproachVideo" class="video-fluid" autoplay muted loop playsinline>
                             <source src="approach.mov" type="video/mp4">
                         </video>
                     </div>
@@ -314,6 +314,17 @@
                 });
                 document.addEventListener("DOMContentLoaded", function () {
                     var videoElement = document.getElementById("myVideo2");
+
+                    videoElement.addEventListener("mouseover", function () {
+                        videoElement.controls = true;
+                    });
+
+                    videoElement.addEventListener("mouseout", function () {
+                        videoElement.controls = false;
+                    });
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    var videoElement = document.getElementById("ApproachVideo");
 
                     videoElement.addEventListener("mouseover", function () {
                         videoElement.controls = true;
