@@ -73,19 +73,19 @@ a:hover {
 
 .definition-box {
     background-color: #f0f0f0;
-    /* Light grey background */
     border: 1px solid #e0e0e0;
-    /* Grey border */
     padding: 20px;
-    /* Padding inside the box */
     margin: 10px;
-    /* Optional: margin around the box */
     border-radius: 10px;
-    /* Rounded corners */
 }
 
 .definition-box>p {
     margin: 0;
+}
+
+.definition-box>span {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .definition-box i {
