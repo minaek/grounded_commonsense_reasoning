@@ -87,3 +87,9 @@ a:hover {
 .definition-box>p {
     margin: 0;
 }
+
+.definition-box i {
+    margin-right: 10px;
+    color: #ffbb00;
+    /* Optional: Change the color of the icon */
+}
