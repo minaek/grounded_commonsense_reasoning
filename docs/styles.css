@@ -97,3 +97,41 @@ a:hover {
     color: #ffbb00;
     /* Optional: Change the color of the icon */
 }
+
+.image-panel {
+    position: relative;
+    width: 160px;
+    /* Set the width of the image panels */
+    height: 120px;
+    /* Set the height of the image panels */
+}
+
+.img-fluid {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* This makes the image cover the entire container while maintaining the aspect ratio */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 20px;
+}
+
+.image-panel:hover .overlay {
+    opacity: 1;
+}
