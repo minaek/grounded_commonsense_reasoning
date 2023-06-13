@@ -1,1 +1,0 @@
-# grounded_social_reasoning
