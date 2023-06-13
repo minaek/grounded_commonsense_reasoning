@@ -5,6 +5,10 @@ body {
     font-family: "Palatino Linotype";
 }
 
+li {
+    font-size: 17px;
+}
+
 .small-caps {
     font-variant: small-caps;
 }
