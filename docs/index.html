@@ -1,1 +1,345 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Paper Showcase</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Row 1: Title -->
+    <div class="container py-5 custom-container">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Toward Grounded Social Reasoning</h1>
+            </div>
+        </div>
+        <br>
+        <!-- Row 2: Authors -->
+        <div class="row text-center py-4">
+            <!-- Repeat this block for each author -->
+            <div class="col-md-2 author-block">
+                <a href="https://stanford.edu/~mnkwon/" target="_blank" class="custom-link">
+                    <img src="minae.jpg" alt="Author Name" class="author-image">
+                    <p>Minae Kwon</p>
+                </a>
+            </div>
+            <div class="col-md-2 author-block">
+                <a href="https://hengyuan-hu.github.io/" target="_blank" class="custom-link">
+                    <img src="hengyuan.jpg" alt="Author Name" class="author-image">
+                    <p>Hengyuan
+                        Hu</p>
+                </a>
+            </div>
+            <div class="col-md-2 author-block">
+                <a href="https://people.eecs.berkeley.edu/~vmyers/" target="_blank" class="custom-link">
+                    <img src="vivek.jpg" alt="Author Name" class="author-image">
+                    <p>Vivek
+                        Myers</p>
+                </a>
+            </div>
+            <div class="col-md-2 author-block">
+                <a href="https://www.siddkaramcheti.com/" target="_blank" class="custom-link">
+                    <img src="sidd.jpg" alt="Author Name" class="author-image">
+                    <p>Siddharth Karamcheti</p>
+                </a>
+            </div>
+            <div class="col-md-2 author-block">
+                <a href="http://people.eecs.berkeley.edu/~anca/" target="_blank" class="custom-link">
+                    <img src="anca.jpg" alt="Author Name" class="author-image">
+                    <p>Anca Dragan</p>
+                </a>
+            </div>
+            <div class="col-md-2 author-block">
+                <a href="https://dorsa.fyi/" target="_blank" class="custom-link">
+                    <img src="dorsasadigh.jpg" alt="Author Name" class="author-image">
+                    <p>Dorsa Sadigh</p>
+                </a>
+            </div>
+            <!-- ... -->
+        </div>
+
+        <!-- Row 3: Links -->
+        <div class="row text-center py-4">
+            <div class="col">
+                <a href="path-to-paper" target="_blank" class="mx-2">
+                    <i class="fas fa-file-pdf"></i> Paper
+                </a>
+                <a href="path-to-dataset" target="_blank" class="mx-2">
+                    <i class="fas fa-database"></i> Dataset
+                </a>
+                <a href="path-to-tweet" target="_blank" class="mx-2">
+                    <i class="fab fa-twitter"></i> Tweet
+                </a>
+                <!-- Add more links with icons as needed -->
+            </div>
+        </div>
+
+        <!-- Row 4: Picture and Video -->
+        <div class="row py-4">
+            <div class="row text-center py-4 align-items-center">
+                <div class="col-md-8 mx-auto">
+                    <div class="video-container">
+                        <video id="myVideo" class="video-fluid" autoplay muted loop playsinline>
+                            <source src="front_video.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <!--<p class="mt-2" style="font-size:16px;"><b>Our robot cleans the surface in a socially appropriate
+                            manner.</b></p>-->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <!-- Paragraph -->
+                <h5 align="center"><i><b>We equip robots with social reasoning skills by enabling them to actively
+                            gather
+                            missing
+                            information from the environment.</b></i></h5>
+                <p>
+                    Consider a robot tasked with tidying a desk with a meticulously constructed Lego sports car. A human
+                    may recognize that it is not socially appropriate to disassemble the sports car and put it away as
+                    part of the "tidying". How can a robot reach that conclusion without human supervision?
+                    Although
+                    large language models
+                    (LLMs) have recently been used to enable social reasoning, grounding this reasoning in the real
+                    world has been challenging. To reason in the real world, our key insight is that robots must go
+                    beyond passively querying
+                    LLMs and <b>actively gather information from the environment</b> that is required to make the right
+                    decision. We propose an approach that leverages an LLM and vision language model (VLM) to
+                    help a robot actively perceive its environment to perform grounded social reasoning. To evaluate our
+                    framework at scale, we release the MessySurfaces dataset which contains images of 70 real-world
+                    surfaces that need to be cleaned.
+                </p>
+            </div>
+            <!-- Row 4: Key Insight -->
+            <div class="row text-justify py-4">
+                <div class="col-12">
+                    <h2>Key Insight</h2>
+                </div>
+            </div>
+            <div class="row text-justify py-4">
+                <div class="col-12">
+                    <p>Tapping into an LLM's social reasoning skills in the real-world requires the ability to ground
+                        language -- an ability that might be
+                        afforded by vision-and-language models (VLMs). However, a fundamental limitation is the
+                        image itself might not contain all the relevant information if the object is partially occluded
+                        or if the image is too zoomed out. Here are
+                        some examples:
+                    </p>
+                    <br>
+                    <div class="col-md-12 mx-auto">
+                        <div class="image-container">
+                            <img src="obstruction.jpg" alt="Description of image" class="img-fluid">
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                        <br>
+                        To address limitations of VLMs, robots will need to go beyond passively querying LLMs and VLMs
+                        to obtain action plans.
+                    </p>
+                    <div class="definition-box" align="center">
+                        <p>Our insight is
+                            that robots must reason about what additional information they need to make socially
+                            appropriate
+                            decisions, <b>and then actively perceive the environment to gather that information</b>
+                            (e.g., take a close-up photo of the paper, take a top-down view of the bag, or look
+                            behind the box to see the camera).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 5: Approach -->
+            <div class="row text-justify py-4">
+                <div class="col-12">
+                    <h2>Approach</h2>
+                </div>
+            </div>
+
+            <div class="row text-justify py-4">
+                <div class="col-12">
+                    <p>We propose a framework to enable a robot to perform grounded social
+                        reasoning
+                        by
+                        iteratively identifying details it still needs to clarify about the scene before it can make a
+                        decision
+                        and actively gathering new
+                        observations to help answer those questions.
+                    </p>
+                </div>
+                <!-- GIF -->
+                <div class="col-md-10 mx-auto">
+                    <div class="video-container">
+                        <video id="myVideo2" class="video-fluid" autoplay muted loop playsinline>
+                            <source src="approach.MOV" type="video/mp4">
+                        </video>
+                    </div>
+                    <!--<p class="mt-2" style="font-size:16px;"><b>Our robot cleans the surface in a socially appropriate
+                            manner.</b></p>-->
+                </div>
+            </div>
+            <!-- Row 6: Dataset -->
+            <div class="row text-justify py-4">
+                <!-- Title -->
+                <div class="col-12">
+                    <h2 class="small-caps">MessySurfaces Dataset</h2>
+                </div>
+            </div>
+
+            <div class="row text-center py-4 align-items-center">
+                <!-- Link to zip file -->
+                <div class="col-md-4">
+                    <a href="MessySurfaces.zip" target="_blank">
+                        <i class="fas fa-file-archive"></i> Download Dataset
+                    </a>
+                </div>
+                <!-- Bullet Points -->
+                <div class="col-md-8 text-left">
+                    <ul>
+                        <li>Contains images of 308 objects across 70 real-world surfaces that need to be cleaned.</li>
+                        <li>Each object has a scene-level image, 5 close-up images, and a benchmark question and answer
+                            on the most socially appropriate way to clean the object up.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 7: Results -->
+            <div class="row py-4">
+                <div class="col-12 text-justify">
+                    <h2>Robot Demonstrations</h2>
+                </div>
+                <div class="row text-center py-4 align-items-center">
+                    <div class="col-md-9 mx-auto">
+                        <div class="video-container">
+                            <video id="myVideo1" class="video-fluid" autoplay muted loop playsinline>
+                                <source src="robot_video1.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="mt-2" style="font-size:18px;">Robot cleaning a child's playroom</p>
+                    </div>
+                    <div class="col-md-9 mx-auto">
+                        <div class="video-container">
+                            <video id="myVideo2" class="video-fluid" autoplay muted loop playsinline>
+                                <source src="robot_video2.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="mt-2" style="font-size:18px;">Robot cleaning a kitchen</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 7: Citation -->
+            <!-- <div class="row py-4">
+                <div class="col-12 text-justify">
+                    <h2>Citation</h2>
+                </div>
+            </div>
+
+            <div class="row py-4 justify-content-center">
+                <div class="col-md-8 text-left">
+                    <pre id="bibtex" class="p-3 border">
+@article{author2023title,
+    title={Title of the Paper},
+    author={Author1 and Author2 and Author3},
+    journal={Name of Journal},
+    volume={volume number},
+    number={issue number},
+    pages={page range},
+    year={2023}
+}
+        </pre>
+                    <button onclick="copyCitation()" class="btn btn-primary">Copy Citation</button>
+                </div>
+            </div> -->
+
+            <!-- Row 8: Acknowledgements -->
+            <!-- <div class="row py-4">
+                <div class="col-12 text-justify">
+                    <h2>Acknowledgements</h2>
+                </div>
+            </div>
+
+            <div class="row py-4 justify-content-center">
+                <div class="col-md-8 text-left">
+                    <p>
+                        TODO
+                    </p>
+                </div>
+            </div> -->
+
+            <!-- Add this script at the end of the body tag -->
+            <script>
+                function copyCitation() {
+                    var text = document.getElementById('bibtex').textContent;
+                    var textArea = document.createElement("textarea");
+                    textArea.value = text;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand("Copy");
+                    textArea.remove();
+                    alert("Citation copied to clipboard");
+                }
+                document.addEventListener("DOMContentLoaded", function () {
+                    var videoElement = document.getElementById("myVideo");
+
+                    videoElement.addEventListener("mouseover", function () {
+                        videoElement.controls = true;
+                    });
+
+                    videoElement.addEventListener("mouseout", function () {
+                        videoElement.controls = false;
+                    });
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    var videoElement = document.getElementById("myVideo1");
+
+                    videoElement.addEventListener("mouseover", function () {
+                        videoElement.controls = true;
+                    });
+
+                    videoElement.addEventListener("mouseout", function () {
+                        videoElement.controls = false;
+                    });
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    var videoElement = document.getElementById("myVideo2");
+
+                    videoElement.addEventListener("mouseover", function () {
+                        videoElement.controls = true;
+                    });
+
+                    videoElement.addEventListener("mouseout", function () {
+                        videoElement.controls = false;
+                    });
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    var video = document.getElementById("myVideo");
+                    video.playbackRate = 4.0; // Set the playback speed to double
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    var video = document.getElementById("myVideo1");
+                    video.playbackRate = 4.0; // Set the playback speed to double
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    var video = document.getElementById("myVideo2");
+                    video.playbackRate = 4.0; // Set the playback speed to double
+                });
+            </script>
+
+        </div>
+
+        <!-- Include Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
