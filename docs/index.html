@@ -21,7 +21,7 @@
     <div class="container py-5 custom-container">
         <div class="row">
             <div class="col text-center">
-                <h1>Toward Grounded Social Reasoning</h1>
+                <h1>Toward Grounded Commonsense Reasoning</h1>
             </div>
         </div>
         <br>
@@ -101,22 +101,23 @@
             </div>
             <div class="col-md-12">
                 <!-- Paragraph -->
-                <h5 align="center"><i><b>We equip robots with social reasoning skills by enabling them to actively
+                <h5 align="center"><i><b>We equip robots with commonsense reasoning skills by enabling them to actively
                             gather
                             missing
                             information from the environment.</b></i></h5>
                 <p>
                     Consider a robot tasked with tidying a desk with a meticulously constructed Lego sports car. A human
-                    may recognize that it is not socially appropriate to disassemble the sports car and put it away as
+                    may recognize that it is not appropriate to disassemble the sports car and put it away as
                     part of the "tidying". How can a robot reach that conclusion without human supervision?
                     Although
                     large language models
-                    (LLMs) have recently been used to enable social reasoning, grounding this reasoning in the real
+                    (LLMs) have recently been used to enable commonsense reasoning, grounding this reasoning in the real
                     world has been challenging. To reason in the real world, our key insight is that robots must go
                     beyond passively querying
                     LLMs and <b>actively gather information from the environment</b> that is required to make the right
                     decision. We propose an approach that leverages an LLM and vision language model (VLM) to
-                    help a robot actively perceive its environment to perform grounded social reasoning. To evaluate our
+                    help a robot actively perceive its environment to perform grounded commonsense reasoning. To
+                    evaluate our
                     framework at scale, we release the <span class="small-caps">MessySurfaces</span> dataset which
                     contains images of 70 real-world
                     surfaces that need to be cleaned.
@@ -130,7 +131,8 @@
             </div>
             <div class="row text-justify py-4">
                 <div class="col-12">
-                    <p>Tapping into an LLM's social reasoning skills in the real-world requires the ability to ground
+                    <p>Tapping into an LLM's commonsense reasoning skills in the real-world requires the ability to
+                        ground
                         language -- an ability that might be
                         afforded by vision-and-language models (VLMs). However, a fundamental limitation is the
                         image itself might not contain all the relevant information if the object is partially occluded
@@ -149,7 +151,7 @@
                         <p>To address limitations of VLMs, robots will need to go beyond passively querying LLMs and
                             VLMs
                             to obtain action plans. Our insight is
-                            that robots must reason about what additional information they need to make socially
+                            that robots must reason about what additional information they need to make
                             appropriate
                             decisions, <b>and then actively perceive the environment to gather that information</b>
                             (e.g., take a close-up photo of the paper, take a top-down view of the bag, or look
@@ -167,7 +169,7 @@
 
             <div class="row text-justify py-4">
                 <div class="col-12">
-                    <p>We propose a framework to enable a robot to perform grounded social
+                    <p>We propose a framework to enable a robot to perform grounded commonsense
                         reasoning
                         by
                         iteratively identifying details it still needs to clarify about the scene before it can make a
@@ -212,7 +214,7 @@
                         <li style="font-size:17px" align="left">Each object has a scene-level image, 5 close-up images,
                             and a
                             benchmark question and answer
-                            on the most socially appropriate way to clean the object up.</li>
+                            on the most appropriate way to clean the object up.</li>
                     </ul>
                 </div>
                 <!-- <div class="container align-items-center">
@@ -332,7 +334,7 @@
                 <div class="col-md-8 text-left">
                     <pre id="bibtex" class="p-3 border">
 @article{kwon2023toward,
-    title={Toward Grounded Social Reasoning},
+    title={Toward Grounded Commonsense Reasoning},
     author={Kwon, Minae and Hu, Hengyuan and Myers, Vivek and Karamcheti, Siddharth and Dragan, Anca and Sadigh, Dorsa},
     journal={arXiv preprint arXiv:2306.08651},
     year={2023}
